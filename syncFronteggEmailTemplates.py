@@ -31,15 +31,13 @@ if response.status_code == 200:
         # Extract the necessary fields
         data_to_update = {
             "type": template["type"],
-            "redirectURL": template["redirectURL"],
+            "redirectURL": template["redirectURLPattern"],
             "senderEmail": template["senderEmail"],
             "htmlTemplate": template["htmlTemplate"],
             "subject": template["subject"],
             "fromName": template["fromName"],
             "active": template["active"],
-            "successRedirectUrl": template["successRedirectUrl"],
-            "redirectUrlPattern": template["redirectURLPattern"],
-            "successRedirectUrlPattern": template["successRedirectUrlPattern"]
+            "successRedirectUrl": template["successRedirectUrlPattern"]
         }
 
         update_response = requests.post(
